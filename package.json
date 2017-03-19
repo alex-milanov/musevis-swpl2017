@@ -11,9 +11,9 @@
     "watch": "npm run watch:js & npm run watch:sass & npm run watch:assets & npm run livereload",
     "watch:js": "watchify -p browserify-hmr src/js/index.js -o dist/js/app.js --debug",
     "watch:sass": "npm run build:sass -- --watch src/sass/**/*",
-    "watch:assets": "nodemon -e md --watch src/assets/**/* --exec 'npm run prebuild'",
+    "watch:assets": "nodemon -e md --watch src/assets/md --exec 'npm run prebuild'",
     "livereload": "livereload dist/**/*.css,dist/**/*.md -e md -d",
-    "start": "npm run build && serve --path dist & npm run watch"
+    "start": "npm run watch & serve --path dist"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "livereload": "^0.6.0",
     "node-sass": "^4.1.1",
     "node-serve": "0.0.3",
+    "nodemon": "^1.11.0",
     "watchify": "^3.8.0"
   }
 }
