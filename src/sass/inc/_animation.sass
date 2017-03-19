@@ -1,0 +1,82 @@
+
+
+// anim
++keyframes(moveToTop)
+  to
+    opacity: 0.3
+    transform: translateY(-100%)
+
++keyframes(moveFromTop)
+  from
+    opacity: 0.3
+    transform: translateY(-100%)
+
++keyframes(moveToLeft)
+  to
+    opacity: 0.3
+    transform: translateX(-100%)
+
++keyframes(moveFromLeft)
+  from
+    opacity: 0.3
+    transform: translateX(-100%)
+
++keyframes(moveToBottom)
+  to
+    opacity: 0.3
+    transform: translateY(100%)
+
++keyframes(moveFromBottom)
+  from
+    opacity: 0.3
+    transform: translateY(100%)
+
++keyframes(moveToRight)
+  to
+    opacity: 0.3
+    transform: translateX(100%)
+
++keyframes(moveFromRight)
+  from
+    opacity: 0.3
+    transform: translateX(100%)
+
++keyframes(scaleDown)
+  to
+    opacity: 0
+    transform: scale(0.7)
+
++keyframes(scaleUp)
+  from
+    opacity: 0
+    transform: scale(0.7)
+
+.moveToTop
+  animation: moveToTop .6s ease both
+
+.moveFromTop
+  animation: moveFromTop .6s ease both
+
+.moveToRight
+  animation: moveToRight .6s ease both
+
+.moveFromRight
+  animation: moveFromRight .6s ease both
+
+.moveToBottom
+  animation: moveToBottom .6s ease both
+
+.moveFromBottom
+  animation: moveFromBottom .6s ease both
+
+.moveToLeft
+  animation: moveToLeft .6s ease both
+
+.moveFromLeft
+  animation: moveFromLeft .6s ease both
+
+.scaleDown
+  animation: scaleDown .4s ease-in both
+
+.scaleUp
+  animation: scaleUp .4s ease-in both

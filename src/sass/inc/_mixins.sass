@@ -1,0 +1,41 @@
+
+=reset
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+
+=header-height($s)
+  +reset
+  display: inline-block
+  height: $s
+  line-height: $s
+
+=pos($top: 0px, $right: 0px, $bottom: 0px, $left: 0px)
+  +reset
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=centerer
+  +reset
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=activatable($displayType: block)
+  display: none
+  &.active
+    display: $displayType
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content

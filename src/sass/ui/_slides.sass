@@ -1,0 +1,66 @@
+.slides
+	+pos
+	overflow: hidden
+	background: #596a72
+	perspective: 1200px
+	transform-style: preserve-3d
+	section
+		position: absolute
+		visibility: hidden
+		overflow: hidden
+		backface-visibility: hidden
+		transform: translate3d(0, 0, 0)
+		&.active
+			visibility: visible
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+		background: radial-gradient(ellipse at center, #cedce7 0%, #596a72 100%)
+		z-index: 0
+		> span
+			+centerer
+			min-width: 480px
+			h1, h2, h3
+				text-align: center
+			h1
+				font-size: 3em
+			h2, h3
+				font-size: 2.5em
+				margin: 20px 0px
+			ul, p
+				font-size: 1.4em
+			p
+				text-align: center
+				margin: 0px
+			a
+				text-decoration: none
+			img
+				max-height: 100%
+				max-width: 100%
+			.codebin
+				margin: 10px 0px
+				min-width: 780px
+				display: inline-block
+				code
+					font-family: monospace
+					font-size: 1.1em
+					white-space: pre
+					display: inline-block
+					float: left
+					padding: 10px
+					color: #3e434c
+					tab-size: 2
+					transition: box-shadow .3s
+					&.example
+						min-width: 400px
+						border: 1px solid #969dab
+						box-shadow: inset 0px 0px 0px #949fa9, 2px 2px 3px rgba(0,0,0,0)
+						&:focus
+							outline: none
+							box-shadow: inset 0px 0px 55px #949fa9, 2px 2px 3px #8a8f96
+					&.console
+						width: 280px
+						.err
+							color: #800
+							font-size: inherit
