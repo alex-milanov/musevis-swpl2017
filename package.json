@@ -11,7 +11,7 @@
     "watch": "npm run watch:js & npm run watch:sass & npm run watch:assets & npm run livereload",
     "watch:js": "watchify -p browserify-hmr src/js/index.js -o dist/js/app.js --debug",
     "watch:sass": "npm run build:sass -- --watch src/sass/**/*",
-    "watch:assets": "nodemon -e md --watch src/assets/md --exec 'npm run prebuild'",
+    "watch:assets": "nodemon -e md --watch src/assets --exec 'npm run prebuild'",
     "livereload": "livereload dist/**/*.css,dist/**/*.md -e md -d",
     "start": "npm run watch & serve --path dist"
   },
