@@ -24,7 +24,9 @@
     "font-awesome": "^4.7.0",
     "iblokz": "github:iblokz/iblokz",
     "marked": "^0.3.6",
+    "raf-stream": "^3.0.0",
     "rx": "^4.1.0",
+    "rx-node": "^1.0.2",
     "snabbdom": "^0.5.4",
     "superagent": "^3.3.1",
     "vm-browserify": "0.0.4"

@@ -17,6 +17,8 @@ let actions = app.adapt(require('./actions'));
 let ui = require('./ui');
 let actions$;
 
+const gamepad = require('./util/gamepad');
+
 // hot reloading
 if (module.hot) {
 	// actions
@@ -91,3 +93,16 @@ window.setTimeout(() => {
 	}
 	// window.LiveReload.on('reload', (...args) => console.log({reload: args}));
 }, 1000);
+
+gamepad.changes()
+	.map(pads => (console.log({pads}), pads))
+	// .withLatestFrom(pressedKeys$, (pads, keys) => ({pads, keys}))
+	.subscribe(pads => {
+		console.log(pads[0]);
+		if (pads[0]) {
+			if (pads[0].axes[1] < 0) actions.move('top');
+			if (pads[0].axes[0] > 0) actions.move('right');
+			if (pads[0].axes[1] > 0) actions.move('bottom');
+			if (pads[0].axes[0] < 0) actions.move('left');
+		}
+	});
