@@ -2778,11 +2778,12 @@ h1, h2, h3, h4, h5 {
       .slides section > span h1 {
         font-size: 3em; }
       .slides section > span h2, .slides section > span h3 {
-        font-size: 2.5em;
+        font-size: 3em;
         margin: 20px 0px; }
-      .slides section > span ul, .slides section > span p {
+      .slides section > span ul {
         font-size: 1.4em; }
       .slides section > span p {
+        font-size: 1.6em;
         text-align: center;
         margin: 0px; }
       .slides section > span a {
@@ -2879,3 +2880,9 @@ img[alt="logo"] {
 img[alt="ai"] {
   width: 100%;
   height: 100%; }
+
+img[alt="left"] {
+  float: left;
+  display: inline-block;
+  margin-right: 40px;
+  height: 128px; }
